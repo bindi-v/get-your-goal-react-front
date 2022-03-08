@@ -4,7 +4,7 @@ function Login() {
   return (
     <>
       <form>
-        <div class="mb-3 d-flex justify-content-center w-50">
+        <div className="mb-3 d-flex justify-content-center w-50  ">
           <label for="exampleInputEmail1 mr-20" class="form-label">
             Email address
           </label>
@@ -14,9 +14,6 @@ function Login() {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
           />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
-          </div>
         </div>
         <div class="mb-3 d-flex justify-content-center w-50">
           <label for="exampleInputPassword1" class="form-label">
@@ -28,7 +25,7 @@ function Login() {
             id="exampleInputPassword1"
           />
         </div>
-        <div class="mb-3 form-check">
+        <div class="mb-3 form-check ms-auto">
           <input type="checkbox" class="form-check-input" id="exampleCheck1" />
           <label class="form-check-label" for="exampleCheck1">
             Check me out
