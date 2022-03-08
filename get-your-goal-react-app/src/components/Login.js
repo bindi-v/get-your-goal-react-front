@@ -41,7 +41,7 @@ function Login() {
       </form>
     </>
   );
-=======
+<>
     <div>Login</div>
     <Form  className='text-center'>
   <Form.Group as={Row} className="mb-3" controlId="formPlaintextUserName">
@@ -74,7 +74,7 @@ function Login() {
 
 <h6 className='text-center'><a href='#Sign Up Instead'>Sign Up Instead</a></h6>
 </>
-  )
+  
 
 }
 
