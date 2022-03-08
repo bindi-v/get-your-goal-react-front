@@ -3,25 +3,41 @@ import React from "react";
 function Login() {
   return (
     <>
-      <div class="login">
-        <form id="login" method="get" action="login.php">
-          <label>
-            <b>User Name</b>
+      <form>
+        <div class="mb-3 d-flex justify-content-center w-50">
+          <label for="exampleInputEmail1 mr-20" class="form-label">
+            Email address
           </label>
-          <input type="text" name="Uname" id="Uname" placeholder="Username" />
-          <br />
-          <label>
-            <b>Password</b>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3 d-flex justify-content-center w-50">
+          <label for="exampleInputPassword1" class="form-label">
+            Password
           </label>
-          <input type="Password" name="Pass" id="Pass" placeholder="Password" />
-          <br />
-          <input type="button" name="log" id="log" value="Log In Here" />
-          <br />
-          <input type="checkbox" id="check" />
-          <span>Remember me</span>
-          <br /> Forgot <a href="#">Password</a>
-        </form>
-      </div>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1">
+            Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
     </>
   );
 }
