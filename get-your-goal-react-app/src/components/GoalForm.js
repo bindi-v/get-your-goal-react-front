@@ -47,22 +47,33 @@ function GoalForm({ goal: initialGoal, notify }) {
 
   return (
       <>
-    <div>GoalForm</div>
-    <h1>{isAdd ? "Add" : "Edit"} Goal</h1>
-    <form onSubmit={handleSubmit}>
+    <h1 className='text-center ' col="35" rows="1">{isAdd ? "Add" : "Edit"} Goal</h1>
+    <form className='text-center' onSubmit={handleSubmit}>
         <div className='mb-5'>
-            <label htmlFor='title'>Goal Title</label>
-            <input type="text" id="title" name="title" className='form-control'
-                   value={goal.title} onChange={handleChange} />
+            <label htmlFor='goalTitle'>Goal Title</label>
+            <input type="text" name="goalTitle"  className='form-control'
+                   value={goal.goalTitle} onChange={handleChange} />
             </div>
         <div className='mb-8'>
             <label htmlFor='goal'>Goal Text</label>
             </div>
         <div className='mb-8'>
-            <textarea name="goal" cols="35" rows="3" value={goal.goal} onChange={handleChange} />
+            <textarea name="goal" cols="50" rows="2" value={goal.goal} onChange={handleChange} />
+            </div>
+            <div className='mb-8'>
+            <label htmlFor='userName'>Created By (UserName) : </label>
             </div>
         <div className='mb-8'>
-            <button className='btn btn-primary mr-3' type="submit">Save</button>
+            <textarea name="userName" cols="40" rows="1" value={goal.userName} onChange={handleChange} />
+            </div>
+            <div className='mb-8'>
+        <label htmlFor='comment'>Comment : </label>
+        </div>
+        <div className='mb-8'>
+            <textarea name="comment" cols="50" rows="2" value={goal.comment} onChange={handleChange} />
+            </div>
+        <div className='mb-8'>
+            <button className='btn btn-primary mr-3' type="submit" onClick={handleSubmit}>Save</button>
             <button className='btn btn-secondary' type="button" onClick={() => notify({ action: "cancel" })}>Cancel</button>
             </div>
         </form>

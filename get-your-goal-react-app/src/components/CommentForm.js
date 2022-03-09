@@ -53,7 +53,7 @@ function CommentForm({ comment: initialComment, subNotify}) {
             <label htmlFor='comment'>Comment text</label>
             </div>
             <div className='mb-8'>
-                <textarea name="comment" cols="35" rows="3" value={comment.comment} onChange={handleChange} />
+                <textarea name="comment" cols="40" rows="3" value={comment.comment} onChange={handleChange} />
                 </div>
             <div className='mb-8'>
                 <button className='btn btn-primary mr-3' type="submit">Save</button>
