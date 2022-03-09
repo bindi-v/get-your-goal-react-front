@@ -19,12 +19,12 @@ function Goal() {
         fetch("http://localhost:8080/goals")
         .then(response => response.json())
         .then(result => { console.log(JSON.stringify(result)); setGoals(result); })
-        .catch(console.log );
+        .catch(console.log(error));
     }
 
     function addClick() {
-        setScopedGoal({ goalId: 0, title: "", goal: ""});
-    setShowDetailsForm(true);
+        setScopedGoal({ goalId: 0, goalTitle: "", goal: "", username: ""});
+        setShowForm(true);
     }
 
     function notify({ action, goal, error }) {
@@ -57,7 +57,7 @@ function Goal() {
             setShowDetailsForm(true);
             return;
         case "delete":
-            setGoals(goals.filter(e => e.goalId !== goal.goalId));
+            setGoals(goal.filter(e => e.goalId !== goal.goalId));
             break;
         case "exit-details-form":
             fetchFromAPI();
@@ -84,15 +84,13 @@ function Goal() {
             </div>
         <div className='col'>
             <button className='btn btn-primary' type="button" onClick={addClick}>Add a Goal</button>
-
             </div>
         </div>
         {error && <div className='alert alert-danger'>{error}</div>}
         {goals.length === 0 ? <div className='alert alert-warning'>No Goals</div>
            : (<div className='row row-cols-3'>
                {goals.map(g => <GoalCard key={g.goalId} goal={g} notify={notify} />)}
-               </div>)
-    }
+               </div>)}
     </>
   )
 }

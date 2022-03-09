@@ -15,7 +15,7 @@ function GoalDetailsForm({ goal: initialGoal, notify }) {
         setShowCommentForm(true);
     }
 
-    function detailsFormNotify({ action, comment, errror }) {
+    function detailsFormNotify({ action, comment, error }) {
         if(error) {
             setError(error);
             setShowCommentForm(false);
@@ -41,7 +41,6 @@ function GoalDetailsForm({ goal: initialGoal, notify }) {
             case "delete-comment":
                 setComment(comment.filter(e => e.commentId !== comment.commentId));
                 break;
-
         }
         setError("");
         setShowCommentForm(false);
@@ -54,7 +53,6 @@ function GoalDetailsForm({ goal: initialGoal, notify }) {
 
   return (
       <>
-    <div>GoalDetailsForm</div>
     <h1>Goal Details</h1>
     {error && <div className='alert alert-danger'>{error}</div>}
     <div className='row mt-2'>
@@ -64,13 +62,11 @@ function GoalDetailsForm({ goal: initialGoal, notify }) {
         </div>
     <div className='col'>
         {<button className='btn btn-primary' type="button" onClick={addCommentClick}>Add a Comment</button>}
-
         </div>
         {comment.length === 0 ? <div className='alert alert-warning'>No Comments</div>
           : (<div className='row row-cols-3'>
               {comment.map(x => <CommentCard key={x.commentId} comment={x} subNotify={detailsFormNotify} />)}
-              </div>)     
-    }
+              </div>)}
     </>
   );
 }

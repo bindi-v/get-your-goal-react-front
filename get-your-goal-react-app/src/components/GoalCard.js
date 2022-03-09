@@ -20,13 +20,12 @@ function GoalCard({ goal, notify }) {
                 <button className='btn btn-danger mr-3' type="button" onClick={handleDelete}>Delete</button>
                 <button className='btn btn-secondary mr-2' type="button" onClick={() => notify({ action: "edit-form", goal: goal })}>Edit</button>
                 <button className='btn btn-secondary mr-2' type="button" onClick={() => notify({ action: "comment", goal: goal.comment })}>Comment</button>
-                   
                     </div>
                 </div>
             </div>
         </div>
     </>
-  )
+  );
 }
 
-export default GoalCard
+export default GoalCard;

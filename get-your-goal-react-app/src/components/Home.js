@@ -7,10 +7,9 @@ class Home extends Component {
     };
 
     async componentDidMount() {
-        const response = await fetch('http:localhost:8080/goals');
+        const response = await fetch('http://localhost:8080/goals');
         const body = await response.json();
         this.setState({ goals: body, isLoading: false});
-
     }
 
     render() {
@@ -20,15 +19,15 @@ class Home extends Component {
         }
     
   return (
-    <div className='Home'>Home
-    <header className='Home-header'>
-        <div className='Home-intro'>
+    <div className='row text-center'>
+    <header className='card'>
+        <div className='card-body'>
             <h2>Goal List</h2>
             {goals.map(goal =>
                 <div key={goal.id}>
                 {goal.goalTitle}
                 <p>{goal.goal}</p>
-                <p>Created By : {goal.userName}</p>
+                <p className='card-footer'>Created By : {goal.userName}</p>
                 </div>
                     )}
             </div>

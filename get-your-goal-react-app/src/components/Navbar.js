@@ -4,8 +4,6 @@ import { FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
-      <>
-    <div>Navbar</div>
     <nav className="navbar navbar-expand-lg navbar-primary bg-light" expand='md'>
     <div className='container'> 
     <h2 className="navbar-brand bg-light navbar-primary logo">GetYourGoal</h2> 
@@ -38,7 +36,6 @@ const Navbar = () => {
             </div> 
      </div>  
     </nav>
-    </>
   )
 }
 
