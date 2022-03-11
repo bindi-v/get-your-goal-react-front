@@ -14,7 +14,7 @@ function CommentForm({ comment: initialComment, subNotify}) {
     function handleSubmit(event) {
         event.preventDefault();
 
-        const url = `http://localhost:8080/comments`;
+        const url = `http://localhost:8081/comments`;
         const method = isAdd ? "POST" : "PUT";
         const expectedStatus = 200;
 

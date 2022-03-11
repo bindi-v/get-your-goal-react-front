@@ -3,7 +3,7 @@ import React from 'react';
 function CommentCard({ comment, subNotify }) {
 
     function handleDelete() {
-        fetch(`http://localhost:8080/comments/${comment.commentId}`, { method: "DELETE" })
+        fetch(`http://localhost:8081/comments/${comment.commentId}`, { method: "DELETE" })
         .then(() => subNotify({ action: "delete-comment", comment: comment}))
         .catch(error => subNotify({ action: "delete-comment", error: error }));
     }
