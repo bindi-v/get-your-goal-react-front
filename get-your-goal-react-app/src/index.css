@@ -11,15 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .logo{
   font-style: italic;
   font: bolder;
   text-decoration: antiquewhite;
 }
+/* .app {
+  text-align: center;
+  height: 100%;
+  background: url('./images/getYourGoal.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./images/getYourGoal.jpg');
+} */
+
+/* .appRandom {
+  height: 100%;
+  background: whitesmoke;
+  width: 40%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+} */
+
 .footer{
   margin-top: 1rem;
-  padding: 1rem;
+  padding-top: 0%;
   background-color: rgb(235, 195, 64);
   position: fixed;
   bottom: 0;

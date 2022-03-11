@@ -14,7 +14,7 @@ function GoalForm({ goal: initialGoal, notify }) {
     function handleSubmit(event) {
         event.preventDefault();
 
-        const url = `http://localhost:8080/goals`;
+        const url = `http://localhost:8081/goals`;
         const method = isAdd ? "POST" : "PUT";
         const expectedStatus = isAdd ? 201 : 200;
 
@@ -47,8 +47,8 @@ function GoalForm({ goal: initialGoal, notify }) {
 
   return (
       <>
-    <h1 className='text-center ' col="35" rows="1">{isAdd ? "Add" : "Edit"} Goal</h1>
-    <form className='text-center' onSubmit={handleSubmit}>
+    <h5 className='text-center ' col="35" rows="1">{isAdd ? "Add" : "Edit"} Goal</h5>
+    <form className='mb-5 text-center' onSubmit={handleSubmit}>
         <div className='mb-5'>
             <label htmlFor='goalTitle'>Goal Title</label>
             <input type="text" name="goalTitle"  className='form-control'

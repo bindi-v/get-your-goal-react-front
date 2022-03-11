@@ -16,7 +16,7 @@ function Goal() {
     }, []);
 
     function fetchFromAPI() {
-        fetch("http://localhost:8080/goals")
+        fetch("http://localhost:8081/goals")
         .then(response => response.json())
         .then(result => { console.log(JSON.stringify(result)); setGoals(result); })
         .catch(console.log(error));

@@ -1,28 +1,21 @@
+/* #root, html, body {
+  margin: 0;
+  padding: 0; 
+  height: 100vh;
+  box-sizing: border-box;
+} */
 .App {
   text-align: center;
-}
-
-.App-logo {
+ }
+ .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
+} 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+} 
 
 .App-link {
   color: #61dafb;
@@ -36,3 +29,114 @@
     transform: rotate(360deg);
   }
 }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+ 
+ /* height: 100%;
+  background: url('./images/getYourGoal.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url('./images/getYourGoal.jpg'); *
+} */
+/* Style the navbar */
+/* #navbar {
+  overflow: hidden;
+  background-color: #333;
+} */
+
+/* Navbar links
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+} */
+
+/* Page content
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+/*.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}*/
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+/*.sticky + .content {
+  padding-top: 60px;
+} */
+
+ .appRandom {
+  height: 20%;
+  background: whitesmoke;
+  width: 60%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+  padding: 1%;
+  box-shadow: 4px 6px 8px lightseagreen;
+  text-align: center;
+} 
+ 
+
+
+.random {
+padding-left: 460px;
+padding-top: 100px;
+}
+.heading {
+  display:flex;
+  align-items: center;
+  height: 150px;
+  width: 400px;
+  font-family: 'Sansita Swashed', cursive;
+  padding-left: 10px;
+}
+
+.buttonRandom{
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 30px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 40px;
+  width: 90px;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid rgba(22, 76, 162, 0.6);
+  font-family: 'Sansita Swashed', cursive;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .cardRandom{
+    width: 80%;
+    height: 30%
+  }
+}
+
+

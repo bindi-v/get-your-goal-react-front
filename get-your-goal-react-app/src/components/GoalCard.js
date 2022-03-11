@@ -3,7 +3,7 @@ import React from 'react'
 function GoalCard({ goal, notify }) {
 
     function handleDelete() {
-        fetch(`http://localhost:8080/goals/${goal.id}`, { method: "DELETE"})
+        fetch(`http://localhost:8081/goals/${goal.id}`, { method: "DELETE"})
         .then(() => notify({ action: "delete", goal: goal }))
         .catch(error => notify({ action: "delete", error: error }));
     }
