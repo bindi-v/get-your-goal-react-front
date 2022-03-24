@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import User from './components/User';
+import EditUser from './components/EditUser';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Footer from './components/Footer';
@@ -18,6 +19,7 @@ function App() {
        <Route path="/" element={<Home/>} />
        <Route path= "/dashboard" element={<Dashboard/>} />
        <Route path="/users" element={<User/>} />
+       <Route path="/users/:id" element={<EditUser/>} />
        <Route path="/login" element={<Login/>} />
        <Route path="/signup" element={<SignUp/>} />
        </Routes>

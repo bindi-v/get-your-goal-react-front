@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Form, Row, Button, Container} from 'react-bootstrap';
-import { Input } from 'reactstrap';
+import { Form, Row, Col, Button, Container} from 'react-bootstrap';
+//import { Input } from 'reactstrap';
 
 class SignUp extends Component {
 
@@ -40,7 +40,7 @@ handleChange(event) {
  async handleSubmit(event) {
   event.preventDefault();
   const {item} = this.state;
-  await fetch('http://localhost:8081/users/' + (item.id ? '/' + item.id: ''), {
+  await fetch('http://localhost:8081/users/' + (item.id ? '/' + item.id : ''), {
     method: (item.id) ? "PUT" : "POST",
     headers: {
       "Accept": "application/json",
@@ -58,65 +58,71 @@ render() {
   return (
     <Container className='text-center'> {title}
     <Form  className='text-center' onSubmit={this.handleSubmit}>
-    <Form.Group as={Row} className="mb-2" controlId="formPlaintextFirstName">
-    <Form.Label column sm="1">
+    <Form.Group as={Row} className="mb-2 " controlId="formPlaintextFirstName">
+    <Form.Label column sm="2" >
       FirstName
     </Form.Label>
-    <Input type="text" name="firstName" id="firstName" value={item.firstName || ''}
-                           onChange={this.handleChange} autoComplete="firstName"/>
+    {/* <Input type="text" name="firstName" id="firstName" className="col-6" value={item.firstName || ''}
+                           onChange={this.handleChange} autoComplete="firstName" required /> */}
 
-    {/* <Col sm="4">
-      <Form.Control type="firstName" placeholder="FirstName" required/>
-    </Col> */}
+    <Col sm="4">
+      <Form.Control type="text" name="firstName"  placeholder="FirstName" value={item.firstName || ''}
+      onChange={this.handleChange} autoComplete="firstName" required/>
+    </Col>
   </Form.Group>
   <Form.Group as={Row} className="mb-2" controlId="formPlaintextLastName">
-    <Form.Label column sm="1">
+    <Form.Label column sm="2">
       LastName
     </Form.Label>
-    <Input type="text" name="lastName" id="lastName" value={item.lastName || ''}
-                           onChange={this.handleChange} autoComplete="lastName"/>
+    {/* <Input type="text" name="lastName" id="lastName" className="col-6" value={item.lastName || ''}
+                           onChange={this.handleChange} autoComplete="lastName" required /> */}
 
-    {/* <Col sm="4">
-      <Form.Control type="lastName" placeholder="LastName" required />
-    </Col> */}
+    <Col sm="4">
+      <Form.Control type="text" name="lastName"  placeholder="LastName" value={item.lastName || ''}
+       onChange={this.handleChange} autoComplete="lastName" required />
+    </Col>
   </Form.Group>
   <Form.Group as={Row} className="mb-2" controlId="formPlaintextUserName">
-    <Form.Label column sm="1">
+    <Form.Label column sm="2">
       UserName
     </Form.Label>
-    <Input type="text" name="userName" id="userName" value={item.userName || ''}
-                           onChange={this.handleChange} autoComplete="userName"/>
+    {/* <Input type="text" name="userName" id="userName" className="col-6" value={item.userName || ''}
+                           onChange={this.handleChange} autoComplete="userName" required /> */}
 
-    {/* <Col sm="4">
-      <Form.Control type="userName" placeholder="UserName" required />
-    </Col> */}
+    <Col sm="4">
+      <Form.Control type="text" placeholder="UserName" name="userName"  value={item.userName || ''}
+      onChange={this.handleChange} autoComplete="userName" required />
+    </Col>
   </Form.Group>
   <Form.Group as={Row} className="mb-2" controlId="formPlaintextEmail">
-    <Form.Label column sm="1">
+    <Form.Label column sm="2">
       Email
     </Form.Label>
-    <Input type="text" name="email" id="email" value={item.email || ''}
-                           onChange={this.handleChange} autoComplete="email"/>
+    {/* <Input type="text" name="email" id="email" className="col-6" value={item.email || ''}
+                           onChange={this.handleChange} autoComplete="email" required /> */}
 
-    {/* <Col sm="4">
-      <Form.Control type="email"  defaultValue="email@example.com" required />
-    </Col> */}
+     <Col sm="4">
+      <Form.Control type="email" name="email"  placeholder="email@example.com" 
+      value={item.email || ''} onChange={this.handleChange} autoComplete="email" required />
+    </Col> 
   </Form.Group>
 
   <Form.Group as={Row} className="mb-2" controlId="formPlaintextPassword">
-    <Form.Label column sm="1">
+    <Form.Label column sm="2">
       Password
     </Form.Label>
-    <Input type="text" name="password" id="password" value={item.password || ''}
-                           onChange={this.handleChange} autoComplete="password"/>
+    {/* <Input type="password" name="password" id="password" className="col-6" value={item.password || ''}
+                           onChange={this.handleChange} autoComplete="password" required /> */}
 
-    {/* <Col sm="4">
-      <Form.Control type="password" placeholder="Password" required />
-    </Col> */}
+     <Col sm="4">
+      <Form.Control type="password" placeholder="Password" name="password"  value={item.password || ''}
+       onChange={this.handleChange} autoComplete="password" required />
+    </Col> 
   </Form.Group>
+  <Form.Group>
   <Button type="submit">Sign Up!</Button>
   <Button color="secondary" tag={Link} to="/users">Cancel</Button>
-
+  </Form.Group>
 </Form>
 </Container>
   )
